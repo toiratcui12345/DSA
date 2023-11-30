@@ -1,0 +1,17 @@
+Định nghĩa Đồ thị Hai Màu:
+Một đồ thị được gọi là đồ thị hai màu nếu có thể tô màu tất cả các đỉnh của nó bằng hai màu (ví dụ, đỏ và xanh) sao cho không có hai đỉnh kề nhau nào có cùng màu.
+Chứng minh:
+Phần 1: Nếu đồ thị là hai màu, nó không chứa chu trình có độ dài lẻ
+Giả sử đồ thị là hai màu.
+Nếu có một chu trình có độ dài lẻ trong đồ thị, khi tô màu chu trình này, sẽ có một đỉnh phải tiếp giáp với một đỉnh cùng màu (vì số lượng đỉnh trong chu trình là lẻ).
+Điều này mâu thuẫn với giả thiết đồ thị là hai màu.
+Do đó, không thể có chu trình có độ dài lẻ trong một đồ thị hai màu.
+Phần 2: Nếu đồ thị không chứa chu trình có độ dài lẻ, nó là đồ thị hai màu
+Giả sử đồ thị không chứa chu trình có độ dài lẻ.
+Bắt đầu tô màu đồ thị từ bất kỳ đỉnh nào với một màu, sau đó tô màu tất cả các đỉnh kề với nó bằng màu còn lại.
+Tiếp tục quá trình này cho tất cả các đỉnh trong đồ thị.
+Nếu tại bất kỳ điểm nào có xung đột màu (hai đỉnh kề nhau có cùng màu), thì điều đó chỉ ra rằng có một chu trình có độ dài lẻ trong đồ thị (vì một chu trình được tạo ra từ các đỉnh đã tô màu).
+Tuy nhiên, giả thiết ban đầu nói rằng không có chu trình lẻ nào, do đó không thể có xung đột màu.
+Vì vậy, đồ thị có thể được tô màu thành công bằng hai màu mà không có xung đột, nghĩa là nó là đồ thị hai màu.
+Kết luận:
+Điều này chứng minh rằng một đồ thị là đồ thị hai màu khi và chỉ khi nó không chứa chu trình có độ dài lẻ.

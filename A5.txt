@@ -1,0 +1,23 @@
+Định nghĩa:
+Biconnected Graph:
+
+Một đồ thị được gọi là biconnected nếu nó liên thông và không có điểm cắt. Nói cách khác, không có một đỉnh nào trong đồ thị mà khi loại bỏ nó cùng với các cạnh liên kết, làm cho đồ thị mất tính liên thông.
+Điểm cắt (Articulation Point):
+
+Một đỉnh trong đồ thị được gọi là điểm cắt nếu loại bỏ nó cùng với các cạnh liên kết, làm cho đồ thị mất tính liên thông.
+Chứng minh:
+Nếu đồ thị không có điểm cắt, nó là biconnected:
+
+Giả sử đồ thị không có điểm cắt.
+Điều này có nghĩa là không có đỉnh nào trong đồ thị mà khi loại bỏ nó, đồ thị sẽ trở nên không liên thông.
+Do đó, giữa mọi cặp đỉnh trong đồ thị, luôn tồn tại ít nhất hai đường đi độc lập không có đỉnh chung (vì nếu chỉ có một đường đi duy nhất, đỉnh trung gian trên đường đi đó sẽ trở thành điểm cắt).
+Điều này chính xác là định nghĩa của một đồ thị biconnected: không thể tách rời đồ thị bằng cách loại bỏ một đỉnh duy nhất.
+Vì vậy, nếu một đồ thị không có điểm cắt, nó chắc chắn là biconnected.
+Ngược lại, nếu đồ thị là biconnected, nó không có điểm cắt:
+
+Giả sử đồ thị là biconnected.
+Điều này có nghĩa là giữa mọi cặp đỉnh, có ít nhất hai đường đi độc lập không chia sẻ đỉnh chung.
+Do đó, không có đỉnh nào có thể được loại bỏ làm cho đồ thị trở nên không liên thông.
+Điều này chứng tỏ rằng đồ thị không có điểm cắt.
+Kết luận:
+Như vậy, chúng ta đã chứng minh được rằng một đồ thị không có điểm cắt là biconnected và ngược lại, một đồ thị biconnected không có điểm cắt. Đây là một tính chất quan trọng trong lý thuyết đồ thị và có nhiều ứng dụng trong việc thiết kế và phân tích mạng, cấu trúc dữ liệu, và nhiều lĩnh vực khác.
