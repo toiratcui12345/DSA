@@ -1,0 +1,11 @@
+Lý do vì sao BFS không đảm bảo thứ tự tô pô:
+Định nghĩa Thứ tự Tô pô: Trong một đồ thị có hướng, một thứ tự tô pô là một thứ tự của các đỉnh sao cho với mỗi cạnh có hướng từ đỉnh u đến v, u xuất hiện trước v trong thứ tự.
+
+Bản chất của BFS: BFS bắt đầu từ một đỉnh nguồn và duyệt đến các đỉnh kề với nó, sau đó đến các đỉnh kề với các đỉnh này và tiếp tục quá trình này. BFS đánh dấu các đỉnh dựa trên khoảng cách (số cạnh) từ đỉnh nguồn.
+
+Không phản ánh Quan hệ Phụ thuộc: BFS không xem xét quan hệ phụ thuộc giữa các đỉnh trong đồ thị. Nghĩa là, BFS không đảm bảo rằng mỗi đỉnh u sẽ được duyệt trước tất cả các đỉnh v mà u hướng tới (có cạnh từ u đến v).
+
+Ví dụ Minh họa: Xét đồ thị có hướng A → B, A → C, B → C. Thứ tự tô pô hợp lệ phải là A, B, C. Tuy nhiên, nếu sử dụng BFS bắt đầu từ A, có thể thu được thứ tự A, C, B vì C và B cùng cách A một cạnh, nhưng thứ tự này không phải là thứ tự tô pô vì nó không đảm bảo rằng B xuất hiện trước C.
+
+Kết luận:
+Do đó, BFS không thể sử dụng để tạo ra một thứ tự tô pô chính xác trong một đồ thị có hướng, vì nó không đảm bảo rằng mọi đỉnh đều xuất hiện trước tất cả các đỉnh mà nó hướng tới trong đồ thị​​.

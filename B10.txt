@@ -1,0 +1,26 @@
+1. Thuật toán Thời gian Tuyến tính để Tìm Thành phần Liên thông Mạnh chứa Đỉnh v:
+Để tìm thành phần liên thông mạnh chứa một đỉnh v cho trước, ta sử dụng thuật toán DFS (Depth-First Search) từ đỉnh v.
+
+Bước 1: Thực hiện DFS từ đỉnh v trên đồ thị gốc để tạo một tập hợp các đỉnh có thể đến được từ v.
+
+Bước 2: Tạo một đồ thị đảo ngược, trong đó mọi cạnh của đồ thị gốc được đảo ngược hướng.
+
+Bước 3: Thực hiện DFS từ đỉnh v trên đồ thị đảo ngược để tạo một tập hợp các đỉnh có thể đến v.
+
+Bước 4: Giao của hai tập hợp từ Bước 1 và Bước 3 sẽ là thành phần liên thông mạnh chứa đỉnh v.
+
+2. Thuật toán Thời gian Bậc Hai để Tìm Tất cả Thành phần Liên thông Mạnh:
+Để tìm tất cả các thành phần liên thông mạnh của một đồ thị, ta áp dụng thuật toán trên cho mỗi đỉnh của đồ thị.
+
+Bước 1: Lặp qua mỗi đỉnh v của đồ thị.
+
+Bước 2: Áp dụng thuật toán tìm thành phần liên thông mạnh chứa v (như đã mô tả ở trên) cho mỗi đỉnh v.
+
+Bước 3: Ghi nhận và loại bỏ các đỉnh đã được xác định là thuộc một thành phần liên thông mạnh trước khi chuyển sang đỉnh tiếp theo.
+
+Bước 4: Lặp cho đến khi tất cả các đỉnh đã được xem xét.
+
+Đánh Giá Về Độ Phức Tạp:
+Thuật toán tìm thành phần liên thông mạnh cho một đỉnh v cho trước có độ phức tạp thời gian là O(V + E), với V là số đỉnh và E là số cạnh của đồ thị, do nó thực hiện hai lần duyệt DFS.
+Thuật toán tìm tất cả các thành phần liên thông mạnh có độ phức tạp thời gian là O(V*(V + E)), vì nó áp dụng thuật toán trên cho mỗi đỉnh của đồ thị.
+Đây là một cách tiếp cận đơn giản và hiệu quả để giải quyết vấn đề liên quan đến thành phần liên thông mạnh trong đồ thị có hướng.
