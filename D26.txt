@@ -1,0 +1,29 @@
+Để chứng tỏ rằng có thể tính các đường đi ngắn nhất trong một đồ thị có hướng với các trọng số không âm tại các đỉnh, và trọng số của một đường đi được xác định bởi tổng các trọng số của các đỉnh trên đường đi đó, chúng ta có thể xây dựng một đồ thị mới với các trọng số cạnh tương ứng. Ý tưởng chính là chuyển trọng số từ đỉnh sang cạnh để sử dụng các thuật toán tìm đường đi ngắn nhất truyền thống như Dijkstra hoặc Bellman-Ford.
+
+### Quá Trình Chuyển Đổi:
+
+1. **Xây dựng Đồ thị Mới**: Với mỗi đỉnh \( v \) trong đồ thị gốc, ta tạo một đỉnh tương ứng trong đồ thị mới. Đối với mỗi cạnh \( (u, v) \) trong đồ thị gốc, ta tạo một cạnh từ \( u \) đến \( v \) trong đồ thị mới với trọng số bằng trọng số của đỉnh \( v \) trong đồ thị gốc.
+
+2. **Đặt Trọng Số cho Các Cạnh**: Trọng số của mỗi cạnh mới \( (u, v) \) trong đồ thị mới là trọng số của đỉnh \( v \) trong đồ thị gốc.
+
+3. **Tính Đường đi Ngắn Nhất**: Sử dụng một thuật toán tìm đường đi ngắn nhất như Dijkstra hoặc Bellman-Ford trên đồ thị mới này.
+
+### Ví Dụ Minh Họa:
+
+Giả sử chúng ta có đồ thị gốc như sau:
+
+- Đỉnh: A (trọng số 2), B (trọng số 5), C (trọng số 3)
+- Cạnh: A -> B, B -> C
+
+Đồ thị mới sẽ là:
+
+- Đỉnh: A, B, C (giữ nguyên)
+- Cạnh: A -> B (trọng số 5), B -> C (trọng số 3)
+
+### Chứng Minh:
+
+Đường đi ngắn nhất từ đỉnh \( u \) đến \( v \) trong đồ thị mới sẽ tương ứng với đường đi ngắn nhất từ \( u \) đến \( v \) trong đồ thị gốc khi xét về tổng trọng số các đỉnh. Điều này là do trọng số của mỗi cạnh mới phản ánh trực tiếp trọng số của đỉnh mà nó dẫn đến trong đồ thị gốc.
+
+### Kết Luận:
+
+Qua phương pháp này, chúng ta có thể sử dụng các thuật toán tìm đường đi ngắn nhất chuẩn trên đồ thị có hướng với trọng số cạnh để giải quyết bài toán tìm đường đi ngắn nhất trong đồ thị có hướng với trọng số đỉnh. Điều này chứng tỏ rằng bài toán với trọng số đỉnh có thể được chuyển đổi và giải quyết như một bài toán với trọng số cạnh.
